@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  gitshop:
+    image: ruby:2.5
+    volumes: 
+      - ./app:/app
+      - /data/volumes
+    ports:
+      - 3000:3000
+    command: bash -c "bin/bash"
+    stdin_open: true
+    tty: true
